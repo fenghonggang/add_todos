@@ -30,28 +30,10 @@ class Link extends Component {
         )
     }
 }
-// const Link = ({ active, children, onClick }) => (
-//     <button
-//         onClick={onClick}
-//         disabled={active}
-//         style={{
-//             marginLeft: '4px',
-//         }}
-//     >
-//         {children}
-//     </button>
-// )
 
-// Link.propTypes = {
-//     active: PropTypes.bool.isRequired,
-//     children: PropTypes.node.isRequired,
-//     onClick: PropTypes.func.isRequired
-// }
-
-const mapStateToProps = (state, ownProps) => //console.log(ownProps.filter, 'ownProps', state.visibilityFilter)
-    ({
-        active: ownProps.filter === state.visibilityFilter
-    })
+const mapStateToProps = (state, ownProps) => ({ //console.log(ownProps.filter, 'ownProps', state.visibilityFilter)
+    active: ownProps.filter === state.visibilityFilter
+})
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
