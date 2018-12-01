@@ -15,6 +15,8 @@ class Link extends Component {
             active,
             children
         } = this.props;
+        console.log(Math.floor(Math.random() * 100 + 1), '1~100随机数')
+        console.log(Math.random(), '0~1随机数')
         // console.log(active, 'active')
         // console.log(children, 'children')
         return (
@@ -43,4 +45,3 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(Link)
-// export default Link
